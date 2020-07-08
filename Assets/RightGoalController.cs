@@ -7,22 +7,20 @@ public class RightGoalController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    void OnTriggerEnter2D(Collider2D col) {
-        Debug.Log("test");
-        BallController ballTemp = GetComponent<BallController>();
-
-        if (ballTemp != null) 
-        {
-            ballTemp.changeP1Score(1);
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        BallController controller = col.gameObject.GetComponent<BallController>();
+        if (controller != null) {
+            controller.changeP1Score(1);
         }
     }
 }

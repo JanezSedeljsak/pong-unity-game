@@ -16,13 +16,11 @@ public class LeftGoalController : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D col) {
-        Debug.Log("test");
-        BallController ballTemp = GetComponent<BallController>();
-
-        if (ballTemp != null) 
-        {
-            ballTemp.changeP2Score(1);
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        BallController controller = col.gameObject.GetComponent<BallController>();
+        if (controller != null) {
+            controller.changeP2Score(1);
         }
     }
 }
