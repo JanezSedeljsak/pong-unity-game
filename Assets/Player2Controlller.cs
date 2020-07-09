@@ -31,4 +31,9 @@ public class Player2Controlller : MonoBehaviour
             transform.Translate(Vector3.down * Time.deltaTime * 4f, Space.World);
         }
     }
+
+    void OnCollisionExit2D(Collision2D other) 
+    {
+        rigidbody.velocity = Vector3.zero;
+    }
 }

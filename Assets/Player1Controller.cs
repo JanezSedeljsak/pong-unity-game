@@ -30,4 +30,9 @@ public class Player1Controller : MonoBehaviour
         }
         
     }
+
+    void OnCollisionExit2D(Collision2D other) 
+    {
+        rigidbody.velocity = Vector3.zero;
+    }
 }

@@ -13,6 +13,8 @@ public class BallController : MonoBehaviour
 
     Vector3 initialPosition;
 
+    float maxVelocity = 25f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +28,8 @@ public class BallController : MonoBehaviour
 
     void Update()
     {
+        ball.velocity = Vector2.ClampMagnitude(ball.velocity, maxVelocity);
+
         if (Input.GetKeyDown("space"))
         {
             if (!gamePaused) return;

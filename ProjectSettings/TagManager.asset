@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Player1
   - Player2
+  - Scoreboard
+  - Score1
+  - Score2
   layers:
   - Default
   - TransparentFX
