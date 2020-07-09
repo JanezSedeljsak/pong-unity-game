@@ -13,7 +13,7 @@ public class BallController : MonoBehaviour
 
     Vector3 initialPosition;
 
-    float maxVelocity = 25f;
+    float maxVelocity = 30f;
 
     // Start is called before the first frame update
     void Start()
@@ -43,14 +43,7 @@ public class BallController : MonoBehaviour
 
     void pushBall()
     {
-        if (roundCount % 2 == 0)
-        {
-            ball.velocity = new Vector3(1f * 8f, 0, 0);
-        }
-        else
-        {
-            ball.velocity = new Vector3(-1f * 8f, 0, 0);
-        }
+        ball.velocity = new Vector3((roundCount % 2 == 0 ? 1f : -1f) * 9f, 0, 0);
     }
 
     public void changeP1Score(int amount)
